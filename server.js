@@ -28,7 +28,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {res.send('it is working')}) //app crashes here
 
-app.get('/profile/:id', (req, res) => { profile.handleProfile () })
+app.get('/profile/:id', (req, res) => { profile.handleProfile (req, res, db, bcrypt) })
     
 app.post('/signin', (req, res) => {signin.handleSignIn(req, res, db, bcrypt) })
 
