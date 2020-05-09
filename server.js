@@ -13,7 +13,7 @@ const db = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
-      ssl: true,
+      ssl: true
     }
   });
 
@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => {res.send("it is working")}) //app crashes here
+app.get('/', (req, res) => {res.send('it is working')}) //app crashes here
 
 app.get('/profile/:id', (req, res) => { profile.handleProfile () })
     
