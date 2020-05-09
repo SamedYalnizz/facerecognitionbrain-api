@@ -8,7 +8,7 @@ This project was used as a learning project.
 ![screenshot](facedetection_screenshot.png)
 
 # This is the Backend
-You can find the Frontend here: LINK
+You can find the Frontend here: https://github.com/SamedYalnizz/facerecognitionbrain
 
 # Learned Concepts
 * ## Node
