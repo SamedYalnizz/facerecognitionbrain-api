@@ -9,14 +9,13 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
-
-
 const db = knex({ 
     client: 'pg',
     connection: {
-      connectionString: process.env.DATABASE_URL,
-      ssl: true
+        host : '127.0.0.1',
+        user : 'syalniz',
+        password : '',
+        database : 'facerecognition'
     }
   });
 
@@ -29,7 +28,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => {res.send('it is working')}) //app crashes here
+app.get('/', (req, res) => {res.send(db.users)}) //app crashes here
 
 app.get('/profile/:id', (req, res) => { profile.handleProfile (req, res, db, bcrypt) })
     
@@ -41,7 +40,7 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
     
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 app.listen(PORT, ()=>{
     console.log(`app is running on port ${PORT}`);
 })
