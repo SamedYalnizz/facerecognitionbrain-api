@@ -1,4 +1,4 @@
-### facereconitionbrain-api
+### facerecognitionbrain-api
 
 # Description
 Users can insert an image-url and check if a face is in their picture. If a face is detected, it will be surrounded by a blue box.
@@ -33,6 +33,7 @@ You can find the Frontend here: https://github.com/SamedYalnizz/facerecognitionb
 2. Run `npm install`
 3. Run `npm start`
 4. You must add your own API key in the controllers/image.js to connect to Clarifai API (https://www.clarifai.com/)
+*** Make sure you are using postgresql for this project
 
 # Acknowledgment
 This project was done as part of the Udemy Zero To Mastery Course by [Andrei Neagoie](https://github.com/aneagoie)
