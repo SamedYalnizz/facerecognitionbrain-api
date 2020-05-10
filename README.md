@@ -26,6 +26,7 @@ You can find the Frontend here: https://github.com/SamedYalnizz/facerecognitionb
 * API keys to backend for security reasons 
 * environmental variables
 * Image Recognition API usage (https://www.clarifai.com/)
+* Deployment to heroku
 
 # Installation
 1. Clone this repository
